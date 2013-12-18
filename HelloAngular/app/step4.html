@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="app.css" rel="stylesheet" />
+    <title>Step 4</title>
+</head>
+<body ng-app="step4App">
+    <div ng-controller="FriendsCtrl">
+        <button ng-click="loadFriends()">Load Friends</button>
+        <ul>
+            <li ng-repeat="friend in friends">
+                {{friend.LastName}}, {{friend.FirstName}}
+            </li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr><th>First</th><th>Last</th></tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="friend in friends">
+                    <td>{{friend.FirstName}}</td>
+                    <td>{{friend.LastName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="step4.js"></script>
+</body>
+</html>

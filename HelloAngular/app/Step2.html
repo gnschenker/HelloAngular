@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Step 2</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+    <h3>Step 2</h3>
+    <div ng-controller="FirstCtrl">
+        <input type="text" ng-model="model.name" />
+        <input type="text" ng-model="model.lastName" />
+        <div>{{model.name}} {{model.lastName}}</div>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

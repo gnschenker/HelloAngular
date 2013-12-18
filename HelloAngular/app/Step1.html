@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Step 1</title>
+    <link href="app.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="FirstCtrl" class="scope">
+        <input type="text" ng-model="model.firstName" />
+        <div>{{model.firstName}}</div>
+        <button ng-click="clickMe(model.firstName)">Click Me</button>
+        <div ng-controller="FirstCtrl" class="scope">
+            <input type="text" ng-model="model.firstName" />
+            <div>{{model.firstName}}</div>
+            <button ng-click="clickMe(model.firstName)">Click Me</button>
+            <div ng-controller="FirstCtrl" class="scope">
+                <input type="text" ng-model="model.firstName" />
+                <div>{{model.firstName}}</div>
+                <button ng-click="clickMe(model.firstName)">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="FirstCtrl" class="scope">
+        <input type="text" ng-model="model.firstName" />
+        <div>{{model.firstName}}</div>
+        <button ng-click="clickMe(model.firstName)">Click Me</button>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

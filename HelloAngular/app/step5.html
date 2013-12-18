@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="TaskListCtrl">
+        <div>
+            <ul>
+                <li ng-repeat="task in tasks">
+                    {{task.Name}} - {{task.Status}}
+                </li>
+            </ul>
+            <button ng-click="refresh()">Refresh</button>
+        </div>
+        <hr />
+        <div ng-controller="NewTaskCtrl">
+            <label>Name</label>
+            <input type="text" ng-model="taskName" />
+            <button ng-click="createTask()">Create</button>
+        </div>
+    </div>
+    <script src="angular.js"></script>
+    <script src="step5.js"></script>
+</body>
+</html>
