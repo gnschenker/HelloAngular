@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Step 6 - Templates</title>
+    <link href="app.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+    <script type="text/ng-template" id="person.html">
+        {{person.last}}, {{person.first}} {{person.middle}}
+    </script>
+
+    <div ng-controller="PersonCtrl">
+        <div ng-repeat="person in persons" ng-include="'person.html'">
+        </div>
+    </div>
+    <h3>Alternative List</h3>
+    <div ng-controller="PersonCtrl">
+        <div ng-repeat="person in persons" ng-include="'templates/person2.html'">
+        </div>
+    </div>
+
+    <h3>Questionnaire</h3>
+    <script type="text/ng-template" id="questionnaire">
+        <div class="question">
+            <span>{{question.number}}.</span>&nbsp;
+            <span>{{question.question}}</span> -&nbsp;
+            <span>{{question.type}}</span>
+            <div class="answer" ng-include="'templates/'+question.type+'.html'">
+            </div>
+        </div>
+    </script>
+    <div ng-controller="QuestionnaireCtrl">
+        <div ng-repeat="question in questionnaire" ng-include="'questionnaire'"></div>
+    </div>
+
+    <h3>A tree</h3>
+    <script type="text/ng-template" id="node.html">
+        {{node.name}}
+        <ul>
+            <li ng-repeat="node in node.children" ng-include="'node.html'">
+            </li>
+        </ul>
+    </script>
+    <div ng-controller="TreeCtrl">
+        <ul>
+            <li ng-repeat="node in tree" ng-include="'node.html'">
+            </li>
+        </ul>
+    </div>
+
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

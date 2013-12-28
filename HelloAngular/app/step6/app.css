@@ -1,0 +1,18 @@
+﻿.person {
+    border:1px solid black; 
+    padding: 2px;
+    margin-bottom:5px; 
+    width:200px;
+}
+
+.question {
+    border: 1px solid darkgray; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.answer {
+    border: 1px solid lightgray;
+    padding: 5px;
+    background: linear-gradient(lightgray, gray)
+}
